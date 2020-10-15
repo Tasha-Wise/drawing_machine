@@ -1,21 +1,68 @@
 let array = [];
+let button1;
+let button2;
+let slider;
+let r = 100;
+let g = 100;
+let b = 100;
+
 function setup() {
   createCanvas(600, 600);
   background(220, 50, 133);
   strokeWeight(5);
   noFill();
+
+   createP("stroke weight:");
+  slider = createSlider(0, 30, 5);
+
 }
 
 
 function draw() {
+	let lineWidth = slider.value();
+	strokeWeight(lineWidth);
+	 stroke(r, g, b);
+	 // check to see if a key is pressed 
+  if (keyIsPressed === true) {
+    // nested if statement checks to see what key is pressed
+    if (key === 'a') {
+      // increase r   
+      r += 5;
+    } else if (key === 's') {
+      // increase g
+      g += 5;
+    } else if (key === 'd') {
+      //increase b
+      b += 5;
+    } else if (key === 'z') {
+      r -= 5;
+    } else if (key === 'x') {
+      //increase b
+      g -= 5;
+    } else if (key === 'c') {
+      // increase g
+      b -= 5;
+
+    }
+	}
+
+
 	if (mouseIsPressed){
 		stroke(map(mouseX, 0, 600, 0, 255, true))
 		background(0),
-		line(width - mouseX, height - mouseY, width - pmouseX, Height - pmouseY);
-		line(mouseX, mouseY, pmouseX, pmouseY);
+		line(pmouseX, pmouseY, mouseX, mouseY)
+		//line(width - mouseX, height - mouseY, width - pmouseX, Height - pmouseY);
+		//line(mouseX, mouseY, pmouseX, pmouseY);
 		array.push([mouseX, mouseY])
 	}
   
+}
+function increaseStrokeWeight(){
+	strokeWeight(10);
+}
+
+function changeStrokeColor(){
+	stroke(30, 255, 40);
 }
 
 function keyTyped(){
