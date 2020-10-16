@@ -6,7 +6,7 @@ let b = 100;
 let backgroundColor = (220, 50, 133);
 
 function setup() {
-  createCanvas(windowWidth, windowWHeight);
+  createCanvas(windowWidth, windowHeight);
   background(backgroundColor);
   strokeWeight(5);
   noFill();
