@@ -51,7 +51,7 @@ function draw() {
 		background(backgroundColor);
 		backgroundColor -= 5;
 		line(pmouseX, pmouseY, mouseX, mouseY)
-		line(width - mouseX, height - mouseY, width - pmouseX, Height - pmouseY);
+		//line(width - mouseX, height - mouseY, width - pmouseX, Height - pmouseY);
 		//line(mouseX, mouseY, pmouseX, pmouseY);
 		array.push([mouseX, mouseY])
 
