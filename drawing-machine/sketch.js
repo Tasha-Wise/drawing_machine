@@ -4,12 +4,14 @@ let r = 100;
 let g = 100;
 let b = 100;
 let backgroundColor = (220, 50, 133);
+let noiseOffset = 0.0;
+let strokeWidth = 5;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(backgroundColor);
-  strokeWeight(5);
-  noFill();
+  
+  
 
    createP("stroke weight:");
   slider = createSlider(0, 30, 5);
@@ -18,6 +20,13 @@ function setup() {
 
 
 function draw() {
+	background(220, 50, 133, 5);
+	strokeWeight(strokeWidth);
+
+	noiseOffset += 0.05;
+	strokeWidth = noise(noiseOffset) * 100;
+
+
 	let lineWidth = slider.value();
 	strokeWeight(lineWidth);
 	 stroke(r, g, b);
@@ -50,9 +59,9 @@ function draw() {
 		stroke(map(mouseX, 0, 600, 0, 255, true))
 		background(backgroundColor);
 		backgroundColor -= 5;
-		line(pmouseX, pmouseY, mouseX, mouseY)
-		//line(width - mouseX, height - mouseY, width - pmouseX, Height - pmouseY);
-		//line(mouseX, mouseY, pmouseX, pmouseY);
+		line(pmouseX, pmouseY, mouseX, mouseY);
+		line(width - pmouseX, height - pmouseY, width - mouseX, Height - mouseY);
+		
 		array.push([mouseX, mouseY])
 
 		beginShape();
@@ -79,7 +88,13 @@ function keyTyped(){
 		saveCanvas('fileName', 'PNG');
 	}else if (key ==='d'){
 		//display image
-		background(220, 50, 133);
+		background(220, 50, 133);{
+
+		}else if (key === 'c'){
+		//clear the image
+		clear();	
+		}
+
 beginShape();
 		for(let i = 0; i < array.length - 1; i++ ){
 			console.log(i);
