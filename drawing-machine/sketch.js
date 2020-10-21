@@ -86,7 +86,7 @@ function keyTyped(){
 	if (key === 's'){
 		//save this image
 		saveCanvas('fileName', 'PNG');
-	}else if (key ==='d'){
+	}else if (key ==='d')
 		//display image
 		background(220, 50, 133);{
 
