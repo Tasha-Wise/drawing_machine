@@ -86,13 +86,13 @@ function keyTyped(){
 	if (key === 's'){
 		//save this image
 		saveCanvas('fileName', 'PNG');
-	}else if (key ==='d')
+	}else if (key === 'd')
 		//display image
 		background(220, 50, 133);{
 
-		}else if (key === 'c'){
+		}else if (key === 'c')
 		//clear the image
-		clear();	
+		clear();{	
 		}
 
 beginShape();
