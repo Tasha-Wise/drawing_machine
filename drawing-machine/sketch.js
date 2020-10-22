@@ -9,9 +9,11 @@ let strokeWidth = 5;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(backgroundColor);
+ // background(backgroundColor);
   
-  
+  drawGrid();
+  strokeWeight(5);
+  noFill();
 
    createP("stroke weight:");
   slider = createSlider(0, 30, 5);
@@ -104,7 +106,7 @@ beginShape();
 endShape();
 		
 	}
-
+	{
 return false;
 }
 function mousePressed(){
@@ -112,3 +114,23 @@ array = [];
 backgroundColor = (30, 255, 40);
 
 }
+
+function drawGrid(){
+	numCells= 20
+	fillColor = 255
+	strokeWeight(0);
+	for (let i = 0; i <= width; i += width / numCells){
+		for (let j = 0; j <= height; j += height/ numCells){
+			if (fillColor === 255){
+				fillColor = 200;
+
+		}else {
+			fillColor = 255;
+		}
+		fill(fillColor);		
+		rect(i, j, width / numCells, height / numCells);
+		}
+	}
+	strokeWeight(5);
+}
+
