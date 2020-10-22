@@ -90,11 +90,11 @@ function keyTyped(){
 		saveCanvas('fileName', 'PNG');
 	}else if (key === 'd')
 		//display image
-		background(220, 50, 133);{
+		background(220, 50, 133){
 
 		}else if (key === 'c')
 		//clear the image
-		clear();{	
+		clear(){	
 		}
 
 beginShape();
