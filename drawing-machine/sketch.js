@@ -62,7 +62,7 @@ function draw() {
 		background(backgroundColor);
 		backgroundColor -= 5;
 		line(pmouseX, pmouseY, mouseX, mouseY);
-		line(width - pmouseX, height - pmouseY, width - mouseX, Height - mouseY);
+		line(width - pmouseX, height - pmouseY, width - mouseX, height - mouseY);
 		
 		array.push([mouseX, mouseY])
 
@@ -83,29 +83,30 @@ function increaseStrokeWeight(){
 function changeStrokeColor(){
 	stroke(30, 255, 40);
 }
+function keyTyped() {
+  if (key === 's') {
+    //save this image
+    saveCanvas('fileName', 'PNG');
+  } else if (key === 'd') {
+    //display image
+    background(220, 50, 133);
 
-function keyTyped(){
-	if (key === 's'){
-		//save this image
-		saveCanvas('fileName', 'PNG');
-	}else if (key === 'd')
-		//display image
-		background(220, 50, 133){
+  } else if (key === 'c') {
+    //clear the image
+    clear();
+  } else {
+    return false;
+  }
 
-		}else if (key === 'c')
-		//clear the image
-		clear(){	
-		}
+  beginShape();
+  for (let i = 0; i < array.length - 1; i++) {
+    console.log(i);
+    //line(array[i][0], array[i][1], array[i + 1][0], array[i + 1][1],);
+    curveVertex(array[i][0], array[i][1]);
+  }
+  endShape();
 
-beginShape();
-		for(let i = 0; i < array.length - 1; i++ ){
-			console.log(i);
-			//line(array[i][0], array[i][1], array[i + 1][0], array[i + 1][1],);
-			curveVertex (array[i][0], array[i][1]);
-		}
-endShape();
-		
-	}
+}
 	{
 return false;
 }
