@@ -89,14 +89,12 @@ function keyTyped() {
     saveCanvas('fileName', 'PNG');
   } else if (key === 'd') {
     //display image
-    background(220, 50, 133);
+    background(220, 50, 133); 
 
-  } else if (key === 'c') {
-    //clear the image
-    clear();
-  } else {
-    return false;
-  }
+    } else if (key === 'c') {
+      //clear the image
+      clear();
+    }
 
   beginShape();
   for (let i = 0; i < array.length - 1; i++) {
@@ -110,11 +108,11 @@ function keyTyped() {
 	{
 return false;
 }
-function mousePressed(){
-array = [];	
-backgroundColor = (30, 255, 40);
+//function mousePressed(){
+//array = [];	
+//backgroundColor = (30, 255, 40);
 
-}
+//}
 
 function drawGrid(){
 	numCells= 20
