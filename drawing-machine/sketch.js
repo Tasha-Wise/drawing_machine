@@ -105,14 +105,14 @@ function keyTyped() {
   endShape();
 
 }
-	{
-return false;
-}
-//function mousePressed(){
-//array = [];	
-//backgroundColor = (30, 255, 40);
-
+//	{
+//return false;
 //}
+function mousePressed(){
+array = [];	
+backgroundColor = (30, 255, 40);
+
+}
 
 function drawGrid(){
 	numCells= 20
