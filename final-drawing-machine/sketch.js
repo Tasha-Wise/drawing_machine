@@ -9,7 +9,7 @@ let strokeWidth = 5;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //background(backgroundColor);
+  background(backgroundColor);
   
   drawGrid();
   strokeWeight(5);
@@ -103,9 +103,9 @@ function keyTyped() {
     curveVertex(array[i][0], array[i][1]);
   }
   endShape();
-//	{
-//return false;
-//}
+	{
+return false;
+}
 }
 	
 function mousePressed(){
