@@ -59,7 +59,7 @@ function draw() {
 
 	if (mouseIsPressed){
 		stroke(map(mouseX, 0, 600, 0, 255, true))
-		//background(backgroundColor);
+		background(backgroundColor);
 		//backgroundColor -= 5;
     line(mouseX, mouseY, pmouseX, pmouseY );
 		line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
