@@ -59,10 +59,12 @@ function draw() {
 
 	if (mouseIsPressed){
 		stroke(map(mouseX, 0, 600, 0, 255, true))
-		background(backgroundColor);
-		backgroundColor -= 5;
-		line(pmouseX, pmouseY, mouseX, mouseY);
-		line(width - pmouseX, height - pmouseY, width - mouseX, height - mouseY);
+		//background(backgroundColor);
+		//backgroundColor -= 5;
+    line(mouseX, mouseY, pmouseX, pmouseY );
+		line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
+    
+		
 		
 		array.push([mouseX, mouseY])
 
