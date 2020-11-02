@@ -103,9 +103,9 @@ function keyTyped() {
     curveVertex(array[i][0], array[i][1]);
   }
   endShape();
-//	{
-//return false;
-//}
+	{
+return false;
+}
 }
 	
 function mousePressed(){
